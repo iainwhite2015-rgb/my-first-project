@@ -222,8 +222,7 @@ hr {
         border-bottom: 1px solid #3a3a3a;
     }
 }
-    @media screen and (min width: 1200px) {}
-    /* reasons section */
+@media screen and (min-width: 1200px) {    /* reasons section */
     #benefits{
         display:flex;
         flex-direction: row;
