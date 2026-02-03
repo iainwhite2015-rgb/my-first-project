@@ -86,7 +86,11 @@ main {
     
     /* make main take up surplus space to push the footer down*/
     flex: 1 0 auto;
+    /* add margin to top to accommodate fixed header */
     margin-top:47px;
+    /*enable flex properties for child elements */
+    display: flex;
+    flex-direction: column;
 }
 
 /*hero section*/
@@ -182,6 +186,50 @@ hr {
     line-height: 0;
 }
 
+/* form */
+
+#signup {
+    background-image: url("../images/signup-image.webp");
+    background-size: cover;
+    background-position: 75%;
+    padding: 20px 10% 0 10%;
+    flex-grow: 1;
+}
+#signup-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+#signup-form h2 {
+    color: #fafafa;
+    margin-bottom: 20px;
+}
+
+.text-input {
+    background: transparent;
+    color: #fafafa;
+    width: 100%;
+    height: 25px;
+    margin: 5px 0 20px 0;
+    border: 1px solid #fafafa;
+    border-radius: 2px;
+    padding: 0 5px;
+}
+
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.join-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    background-color: #454b1b;
+    color: #fafafa; 
+}
+
 /*footer*/
 #social-networks {
     text-align: center;
@@ -229,6 +277,27 @@ hr {
         font-size: 280%;
         line-height:75px;
         margin: 0 0.5rem;
+    }
+
+    #signup{
+        background-position: center;
+        position: relative;
+    }
+    
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150%;
+    }
+
+    .text-input:hover {
+        border-color: #f16d6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
     }
 
     /* Main content*/
