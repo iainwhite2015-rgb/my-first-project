@@ -167,7 +167,7 @@ hr {
     background: rgba( 0, 0, 0, 0.6);
     padding: 15px;
     text-align: center;
-    flex-basis: 200px
+    flex-basis: 200px;
     flex-grow: 1;
     border: 2px solid white;
 }
@@ -279,27 +279,6 @@ hr {
         margin: 0 0.5rem;
     }
 
-    #signup{
-        background-position: center;
-        position: relative;
-    }
-    
-    #signup-form {
-        max-width: 400px;
-        position: absolute;
-        left: 10%;
-        top: 150%;
-    }
-
-    .text-input:hover {
-        border-color: #f16d6b;
-    }
-
-    .join-button:hover {
-        background-color: #fafafa;
-        color: #454b1b;
-    }
-
     /* Main content*/
     main {
         /* Push main content down to accommodate larger header */
@@ -326,6 +305,28 @@ hr {
 
     #photos {
         column-count: 3;
+    }
+
+    /* form */
+    #signup {
+        background-position: center;
+        position: relative;
+    }
+    
+    #signup-form {
+        max-width: 400px;
+        position: absolute;
+        left: 10%;
+        top: 150px;
+    }
+
+    .text-input:hover {
+        border-color: #f16d6b;
+    }
+
+    .join-button:hover {
+        background-color: #fafafa;
+        color: #454b1b;
     }
 }
 
