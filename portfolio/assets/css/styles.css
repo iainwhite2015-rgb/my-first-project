@@ -1,0 +1,80 @@
+/*  
+    #a4c2d1; egg blue
+    #dbdcde; light grey
+    #1f7798; mid-blue
+    #184f63; dark-blue
+*/
+
+/* global styles */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #a4c2d1;
+}
+
+h1,
+h2 {
+    font-family: 'DM Serif Display', serif;
+    color: #184f63;
+}
+
+.custom-button {
+        background-color: #1f7798;
+        border: #1f7798;
+}
+
+.custom-button:hover{
+        background-color: #1d6d8a;
+        border: #1d6d8a;
+}
+
+.sharp-corners,
+.sharp-corners * {
+    border-radius: 0;
+}
+
+#about {
+    background-color: white;
+}
+
+#portfolio {
+    background-color:#dbdcde;
+}
+
+#portfolio .card-title {
+    color: #1f7798;
+    font-size: 1.2 rem;
+}
+
+#portfolio .btn-outline-secondary:hover {
+    background-color: #1f7798;
+}
+
+#portfolio .card-text {
+    min-height: 120px;
+}
+
+#contact {
+    background-color: white;
+}
+
+#hero {
+    background-color:#dbdcde;
+    background-image: url(../images/hero.webp);
+    background-size: cover;
+    background-position: 50% 70%;
+    min-height: 500px;
+    padding: 5% 7%;
+}
+
+/* Media queries */
+
+/* Use Bootstrap breakpoint for XL screens */
+@media screen and (min-width: 1220px) {
+    /*fixes all portfoilio cards being too tall on xl screens */
+    #portfolio .card-text {
+        min-height: auto;
+    }
+}
