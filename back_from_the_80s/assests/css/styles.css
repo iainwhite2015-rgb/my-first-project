@@ -1,0 +1,237 @@
+/* google fonts*/
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Edu+SA+Hand:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Edu+SA+Hand:wght@400..700&display=swap');
+/* override browser defaults */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* general body styles*/
+body {
+    min-height : 100vh;
+    display: flex;
+    flex-direction: column; 
+    color: black;
+    font-family: 'Edu SA Hand', cursive;
+     background: linear-gradient(
+    135deg,
+    #F9E784 0%,
+    #F7D046 25%,
+    #E6B800 50%,
+    #C99700 75%,
+    #F9E784 100%
+  );
+    
+    
+
+}
+h1, h2, h3 {
+    font-family: 'Bebas Neue', cursive;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header {
+    font-size: 140%;
+    display: flex;
+    align-items: baseline;
+    position: fixed;
+    padding: 0 1rem;
+    width: 100%;
+    background-color: #faec57;
+    box-shadow: 0 2px 5px rgba(58, 58, 58, 0.3);
+    justify-content: space-between;
+    z-index: 99;
+}
+header a {
+    text-decoration: none;
+    color: black;
+}   
+#menu {
+    font-size :90%;
+    list-style-type: none;
+    letter-spacing: 4px;
+
+}
+#menu>li {
+    margin-bottom: 1em;
+}
+.active {
+    border-bottom: 1px solid black
+}
+nav {
+    position: absolute;
+    background-color:#faec57;
+    padding: 0 1rem;
+    width: 100%;
+    box-shadow: 0 2px 2px rgba(58, 58, 58, 0.3);
+    left: 0;
+    display:none;
+    top: 100%;
+}
+#nav-toggle:checked~nav {
+    display:block;
+}
+#nav-toggle {
+    display: none;
+}
+.nav-toggle-label {
+    font-size: 2rem;
+    margin-left: auto;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+main {
+    flex: 1 0 auto;
+    margin-top: 77px;
+    display: flex;
+    flex-direction: column;
+}
+
+#hero {
+    height: 600px;
+    width: 100%;
+    background: url('../images/vochemis.jpeg') no-repeat center center/cover;
+    position: relative
+}
+
+#contact { 
+    background-image: url("../images/contact.png");
+    background-size: cover;
+    padding:20px 10% 0 10%;
+    flex-grow: 1;
+}
+
+#contact-form {
+    color: #ffffff;
+    background-color: rgba(60, 60, 60, 0.6);
+    padding: 30px;
+}
+
+#contact-form h2 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.text-input, .text-area {
+    background: transparent;
+    color: #ffffff;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.contact-button {
+    margin-top: 20px;
+    border-radius: 2px;
+    padding: 15px 32px;
+    background-color: #22250c;
+    color: #ffffff; 
+}
+
+
+#social-networks {
+    text-align: center;
+    padding: 20px 0;
+    display:flex;
+    justify-content:space-evenly;
+    list-style-type: none;
+}
+
+#social-networks i {
+    font-size: 160%;
+    padding: 5%;
+    color: #3a3a3a;
+}
+
+
+/* media query : large or landscape phones (576px and up)*/
+@media screen and (min-width: 576px) {
+    #photos {
+        column-count: 2;
+        column-gap: 0;
+    }
+}
+/* Media query : tablets and larger (768px and up)*/
+@media screen and (min-width: 768px) {
+    /* header*/
+    nav{ 
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right:1rem;
+    }
+
+    #menu {
+        display: flex;
+    }
+    #menu>li {
+        padding-left: 1rem;
+    }
+    .nav-toggle-label {
+        display: none;
+    }
+
+    #logo {
+        font-size: 280%;
+        line-height:75px;
+        margin: 0 0.5rem;
+    }
+
+    /* Main content*/
+    main {
+        /* Push main content down to accommodate larger header */
+        margin-top: 95px;
+    }
+    /* hero */
+    #cover-text {
+        width: 300px;
+        right: 50px;
+    }
+   
+    #photos {
+        column-count: 3;
+    }
+}
+
+/* form */
+
+#contact {
+    background-position: center;
+    position: relative;
+}
+#contact-form {
+    max-width: 500px;
+    left: 10%;
+    top: 200px;
+}
+.radio-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.text-input:hover, .text-area:hover {
+    border:#fa3131;
+}
+
+.contact-button:hover {
+    background-color: #ffffff;
+    color: #ddf540;
+}
+
+/* media query for laptops and larger (992px and up) */
+
+@media screen and (min-width: 992px) {
+    #menu a:hover {
+        border-bottom: 1px solid #3a3a3a;
+    }
+}
+
